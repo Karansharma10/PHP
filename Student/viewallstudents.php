@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12 logg">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <button onclick="myFunction()" class="dropbtn">☰</button>
         <div id="myDropdown" class="dropdown-content">
         <a href="../Student/viewallstudents.php">View Student</a>
                 <a href="../Teacher/selectteacher.php">View Teacher</a>
@@ -125,7 +125,7 @@ if ($result->num_rows > 0) {
         <td>".md5($row["s_password"])."</td>
         <td><img src='../images/".$row['s_image']."'height = '100px' width = '100px'></td>
         <td><a href ='studentupdate.php?id=".$row['id']."'><i class='fa fa-edit'><i></a></td>
-        <td><a href ='studentdelete.php?id=".$row['id']."'><i class='fa fa-trash'></a></td>
+        <td><a href ='studentdelete.php?id=".$row['id'].'&username='.$row['s_username']."'><i class='fa fa-trash'></a></td>
         </tr></tbody>";
     }
     echo "</table>";

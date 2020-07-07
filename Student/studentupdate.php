@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
     }
 
 
- echo $two =mysqli_query($conn,"UPDATE student SET
+  $two =mysqli_query($conn,"UPDATE student SET
 			 s_registration='$s_registration', 
 			s_rollno='$s_rollno',
 			s_name='$s_name',
@@ -132,7 +132,7 @@ if (mysqli_num_rows($result) > 0) {
 		<div class="row">
 			<div class="col-lg-12 logg">
 				<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Menu</button>
+  <button onclick="myFunction()" class="dropbtn">☰</button>
   <div id="myDropdown" class="dropdown-content">
   <a href="../Student/viewallstudents.php">View Student</a>
                 <a href="../Teacher/selectteacher.php">View Teacher</a>

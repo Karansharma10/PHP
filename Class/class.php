@@ -73,12 +73,7 @@ $sql="INSERT INTO class (c_class,c_subject) VALUES('$c_class','$c_subject')";
 <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
   </head>
 
-<style type="text/css">
- a:hover {
-    color: #8FC5EB !important;
-    text-decoration: underline;
-}
-</style>
+
 <body>
 
 
@@ -87,9 +82,10 @@ $sql="INSERT INTO class (c_class,c_subject) VALUES('$c_class','$c_subject')";
     <div class="row">
       <div class="col-lg-12 logg">
         <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Menu</button>
+  <button onclick="myFunction()" class="dropbtn">☰</button>
   <div id="myDropdown" class="dropdown-content">
   <a href="../Student/viewallstudents.php">View Student</a>
+  
                 <a href="../Teacher/selectteacher.php">View Teacher</a>
                 <a href="../Student/Studentregistration.php">Add Student</a>
                 <a href="../Teacher/teacherregistration.php">Add Teacher</a>
@@ -105,7 +101,7 @@ $sql="INSERT INTO class (c_class,c_subject) VALUES('$c_class','$c_subject')";
       <div class="col-lg-12">
         <h1 class="wer">SCHOOL</h1>
       </div>
-      <form method="post">
+      <form method="post" name="myform" onsubmit="return validateform()">
       <div class="col-lg-12">
         <div class="login-wrap">
   <div class="login-html">
@@ -189,13 +185,13 @@ while($row = mysqli_fetch_assoc($userData)){
         
       </div>
       <div class="col-lg-12">
-          <h1 class="head1">All Right Reserved To <a class="web" href="www.webcodice.com">WEBCODICE</a></h1>
+          <h1 class="head1">All Right Reserved To <a class="web" href="http://www.webcodice.com/">WEBCODICE</a></h1>
         </div>
     </div>
   </div>
 </div>
 
-</body>
+
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -216,13 +212,24 @@ window.onclick = function(event) {
     }
   }
 }
-</script>
-<script type="text/javascript">
+
   $(".chosen-select").chosen({
   no_results_text: "Oops, nothing found!"
 })
 
-</script>
 
-
+function validateform(){  
+var name=document.myform.c_class.value;  
+var password=document.myform.c_subject.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}    
+</script>  
+</body>
 </html>

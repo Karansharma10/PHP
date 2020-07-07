@@ -88,7 +88,7 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12 logg">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <button onclick="myFunction()" class="dropbtn">☰</button>
         <div id="myDropdown" class="dropdown-content">
         <a href="profilepagestudent.php">Profile</a>
                 <a href="qrcodepagestudent.php">Qr Code Scann</a>
@@ -147,7 +147,7 @@ $sql= mysqli_query($conn,"SELECT * from student where s_username = '{$_SESSION['
   <th>Class</th>
   <th>Section</th>
   <th>Username</th>
-  <th>Password</th>
+  
   <th>Image</th>
   
    </tr></thead>";
@@ -170,7 +170,6 @@ $sql= mysqli_query($conn,"SELECT * from student where s_username = '{$_SESSION['
     <td>".$row["s_class"]."</td>
     <td>".$row["s_section"]."</td>
     <td>".$row["s_username"]."</td>
-    <td>".$row["s_password"]."</td>
     <td><img src='../images/".$row['s_image']."'height = '100px' width = '100px'></td>
     </tr></tbody>";
 

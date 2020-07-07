@@ -36,10 +36,10 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12 logg">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <button onclick="myFunction()" class="dropbtn">☰</button>
         <div id="myDropdown" class="dropdown-content">
         <a href="profilepageteacher.php">Profile</a>
-        <a href="../Qrcode/qrcodegenerated.php">Qr Code </a>
+        <a href="../Qrcode/index.php">Qr Code Generated </a>
 
 <!-- <a href="../Class/class.php">Add Class</a> -->
 

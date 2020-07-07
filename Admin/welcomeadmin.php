@@ -68,7 +68,7 @@ session_start();
         <div class="row">
           <div class="col-lg-12 nav">
             <div class="dropdown">
-              <button onclick="myFunction()" class="dropbtn">Menu</button>
+              <button onclick="myFunction()" class="dropbtn">☰</button>
               <div id="myDropdown" class="dropdown-content">
                 <a href="../Student/viewallstudents.php">View Student</a>
                 <a href="../Teacher/selectteacher.php">View Teacher</a>

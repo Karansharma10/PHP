@@ -10,6 +10,10 @@ body {
   background-size: cover;
   font: 600 16px/18px "hobo std";
 }
+a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
 :after,
 :before {
   box-sizing: border-box;
@@ -140,7 +144,7 @@ a {
 }
 
 .web:hover {
-  color: yellowgreen;
+  color: yellowgreen !important;
 }
 
 .login-form .group input[data-type="password"] {

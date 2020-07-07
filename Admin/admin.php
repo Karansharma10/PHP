@@ -18,7 +18,7 @@ if ($conn->query($sql) === TRUE) {
 //   echo "New record created successfully";
   $main= "INSERT INTO user_main (username,password,role) VALUES ('$a_username','$a_password','Admin')";
      mysqli_query($conn,$main);
-    echo "Data Inserted successfully";
+    echo "<script>('Data Inserted successfully')</script>";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -85,7 +85,7 @@ if ($conn->query($sql) === TRUE) {
       <div class="col-lg-12">
         <h1 class="wer">SCHOOL</h1>
       </div>
-      <form method="post">
+      <form method="post" name="myform" onsubmit="return validateform()">
       <div class="col-lg-12">
         <div class="login-wrap">
   <div class="login-html">
@@ -95,14 +95,14 @@ if ($conn->query($sql) === TRUE) {
       <div class="sign-in-htm">
         <div class="group">
           <label for="user" class="label">Username</label>
-           <input type="text" id="user" name="a_username" class="input" placeholder="Subject Name">
+           <input type="text" id="user" name="a_username" class="input" placeholder="Username">
                       
 		</div>
 		
 
         <div class="group">
           <label for="user" class="label">Password</label>
-<input type="password" id="user" name="a_password" class="input" placeholder="Subject Code">
+<input type="password" id="user" name="a_password" class="input" placeholder="Password">
           
 
         </div>
@@ -165,6 +165,22 @@ window.onclick = function(event) {
     }
   }
 }
+
+function validateform(){  
+var name=document.myform.a_username.value;  
+var password=document.myform.a_password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+
+
+
 </script>
 
 

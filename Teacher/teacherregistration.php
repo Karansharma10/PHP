@@ -109,7 +109,7 @@ if (isset($_POST['submit'])) {
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 logg">
-      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <button onclick="myFunction()" class="dropbtn">☰</button>
               <div id="myDropdown" class="dropdown-content">
               <a href="../Student/viewallstudents.php">View Student</a>
                 <a href="../Teacher/selectteacher.php">View Teacher</a>
@@ -158,7 +158,7 @@ if (isset($_POST['submit'])) {
 					<input id="user" type="tel" class="input" name="t_phone" placeholder=" ENTER PHONE NO">
 				</div>
 <div class="group">
-					<label for="user" name="t_qualification" class="label">Qualification</label>
+					<!-- <label for="user" name="t_qualification" class="label">Qualification</label>
                      <select id="user" name="t_qualification"  class="input" value="Qualification">
                        <option value="1">class 1</option>
                        <option value="2">class 2</option>
@@ -167,7 +167,10 @@ if (isset($_POST['submit'])) {
                        <option value="5">class 5</option>
 
                       
-                     </select>
+                     </select> -->
+
+          <label for="user" class="label">Qualification</label><br>
+					<input id="user" type="text" class="input" name="t_qualification" placeholder="Qualification">
 </div>
 
 				<div class="group">
@@ -187,7 +190,8 @@ if (isset($_POST['submit'])) {
 					<input id="user" type="password" class="input" data-type="password" name="t_cpassword" placeholder="CONFIRM PASSWORD">
 				</div>
 
-			
+<br>
+	<br>
 				
 				<div class="group">
 					<label>Upload profile pic
@@ -204,7 +208,9 @@ if (isset($_POST['submit'])) {
   <label for="female">Female</label>
   <input type="radio" id="other" name="t_gender" value="other">
   <label for="other">Other</label>
-				</div>
+        </div>
+        
+        
 
 			<!-- 	<div class="group">
 					<label for="user" class="label">Select Gender</label>

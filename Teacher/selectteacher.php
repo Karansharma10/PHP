@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12 logg">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <button onclick="myFunction()" class="dropbtn">☰</button>
         <div id="myDropdown" class="dropdown-content">
         <a href="../Student/viewallstudents.php">View Student</a>
                 <a href="../Teacher/selectteacher.php">View Teacher</a>
@@ -48,7 +48,7 @@
 <!-- <a class="sign" href="#SignIn"><i class="fa fa-user-circle"></i>SignIn</a> -->
             </div>
             <div class="col-lg-12 col-md-6">
-                <h1 class="wer1">View Student Registration</h1>
+                <h1 class="wer1">View Teacher Registration</h1>
             </div>
         
                 <!-- <tr>
@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
         <td>".$row["t_password"]."</td>
         <td><img src='../images/".$row['t_image']."'height = '100px' width = '100px'></td>
         <td><a href ='updateteacher.php?id=".$row['id']."'><i class='fa fa-edit'><i></a></td>
-        <td><a href ='deleteteacher.php?id=".$row['id']."'><i class='fa fa-trash'></a></td>
+        <td><a href ='deleteteacher.php?id=".$row['id'].'&username='.$row['t_username']."'><i class='fa fa-trash'></a></td>
         </tr></tbody>";
     }
     echo "</table>";

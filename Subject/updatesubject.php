@@ -42,7 +42,7 @@ if (mysqli_num_rows($result) > 0) {
 <head>
   <title></title>
   <head>
-    <title>Subject</title>
+    <title> Update Subject</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
@@ -92,7 +92,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="col-lg-12">
         <h1 class="wer">SCHOOL</h1>
       </div>
-      <form method="post">
+      <form method="post" name="myform" onsubmit="return validateform()">
       <div class="col-lg-12">
         <div class="login-wrap">
   <div class="login-html">
@@ -176,7 +176,20 @@ window.onclick = function(event) {
   }
 }
 </script>
-
+<script>  
+function validateform(){  
+var subjectname=document.myform.subjectname.value;  
+var subjectcode=document.myform.subjectcode.value;  
+  
+if (subjectname==null || subjectname==""){  
+  alert("subjectname can't be blank");  
+  return false;  
+}else if(subjectcode==null || subjectcode==""){  
+  alert("subjectcode can't be blank");  
+  return false;
+}  
+}
+</script>  
 
 
 </html>

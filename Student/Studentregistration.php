@@ -135,7 +135,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id']))
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 logg">
-      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <button onclick="myFunction()" class="dropbtn">☰</button>
               <div id="myDropdown" class="dropdown-content">
               <a href="../Student/viewallstudents.php">View Student</a>
                 <a href="../Teacher/selectteacher.php">View Teacher</a>
@@ -155,7 +155,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id']))
 				<h1 class="wer">SCHOOL</h1>
 			</div>
 
-			<form method="post" enctype="multipart/form-data">
+			<form method="post" enctype="multipart/form-data" name="myform" onsubmit="validateform()">
 			<div class="col-lg-12">
 				<div class="login-wrap">
 	<div class="login-html">
@@ -182,7 +182,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id']))
 				</div>
 				<div class="group">
 					<label for="user" class="label">Contact no</label><br>
-					<input id="user" type="tel" class="input" name="s_phone" placeholder=" ENTER CONTACT NO" >
+					<input id="user" type="text" class="input" name="s_phone" placeholder=" ENTER CONTACT NO" >
 				</div>
 				<div class="group">
 					<label for="user" class="label">Password</label><br>
@@ -349,6 +349,86 @@ window.onclick = function(event) {
         }
         return true;
     }
+
+
+    function validateform(){  
+
+      
+var name=document.myform.s_name.value;  
+// var password=document.myform.s_password.value;
+// var class=document.myform.s_class.value;
+// var registration=document.myform.s_registration.value;
+// var rollno=document.myform.s_rollno.value;
+var fname=document.myform.s_fname.value;
+// var dob=document.myform.s_dob.value; 
+// var gender=document.myform.s_gender.value;
+// var email=document.myform.s_email.value; 
+// var phone=document.myform.s_phone.value;
+// var batch=document.myform.s_batch.value;
+// var section=document.myform.s_section.value;
+// var username=document.myform.s_username.value;
+// var image=document.myform.s_image.value;
+
+
+// if (image==null || image==""){  
+//   alert("Image number can't be blank");  
+//   return false;  
+// }
+// if (username==null || username==""){  
+//   alert("Username number can't be blank");  
+//   return false;  
+// }
+// if (section==null || section==""){  
+//   alert("Section number can't be blank");  
+//   return false;  
+// }
+// if (batch==null || batch==""){  
+//   alert("Batch number can't be blank");  
+//   return false;  
+// }
+
+// if (phone==null || phone==""){  
+//   alert("Phone number can't be blank");  
+//   return false;  
+// }
+// if (email==null || email==""){  
+//   alert("E-mail can't be blank");  
+//   return false;  
+// }
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+// if (gender==null || gender==""){  
+//   alert("Gender can't be blank");  
+//   return false;  
+// }
+// if (dob==null || dob==""){  
+//   alert("Date Of Birth can't be blank");  
+//   return false;  
+// }
+// if(password.length<6){  
+//   alert("Password must be at least 6 characters long.");  
+//   return false;  
+//   }  
+// if (class==null || class==""){  
+//   alert("Class can't be blank");  
+//   return false;  
+// } 
+// if (registration==null || registration==""){  
+//   alert("Registration can't be blank");  
+//   return false;  
+// }
+// if (rollno==null || rollno==""){  
+//   alert("Roll_no can't be blank");  
+//   return false;  
+// }  
+if (fname==null || fname==""){  
+  alert("Fathername can't be blank");  
+  return false;  
+} 
+}  
 </script>
 
 

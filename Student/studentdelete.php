@@ -29,8 +29,9 @@ while($row = $result->fetch_assoc()) {
 $sql = "DELETE FROM student WHERE id='".$_GET['id']."'";
 
 if ($conn->query($sql) === TRUE) {
+  $sql = mysqli_query($conn,"DELETE FROM user_main WHERE username='".$_GET['username']."'");
     echo "<script>alert('Record deleted successfully')</script>";
-    header('location:viewallstudents.php');
+    echo'<script>window.location.replace("viewallstudents.php");</script>';
 } else {
     echo "Error deleting record: " . $conn->error;
 }

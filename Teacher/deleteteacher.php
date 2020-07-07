@@ -1,6 +1,10 @@
 <?php
 
 include '../config/connect.php';
+if(!isset($_COOKIE['Admin'])){
+  header('location:./login.php');
+}
+
 $id =$_REQUEST['id'];
 $sql = "SELECT * FROM teacher WHERE id='$id'";
 $result = $conn->query($sql);
@@ -16,27 +20,20 @@ while($row = $result->fetch_assoc()) {
     echo "Not Working";
   }
   else {
-   echo "deleted";
+   echo "Image deleted";
   }
-
 
 
 // sql to delete a record
 $sql = "DELETE FROM teacher WHERE id='".$_GET['id']."'";
-// $sql = "DELETE FROM user_main WHERE id='".$_GET['username']."'";
-
-
 if ($conn->query($sql) === TRUE) {
-    // echo "Record deleted successfully";
-    header('location:selectteacher.php');
+  $sql = mysqli_query($conn,"DELETE FROM user_main WHERE username='".$_GET['username']."'");
+  echo'<script>alert("Data Deleted Successful")</script>';
+
+  echo'<script>window.location.replace("selectteacher.php");</script>';
+  
 } else {
-    echo "Error deleting record: " . $conn->error;
+  echo "Error deleting record: " . $conn->error;
 }
 
-
-
-
-
-
-$conn->close();
 ?>

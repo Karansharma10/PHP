@@ -88,10 +88,10 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12 logg">
-        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <button onclick="myFunction()" class="dropbtn">☰</button>
         <div id="myDropdown" class="dropdown-content">
                 <a href="profilepageteacher.php">Profile</a>
-                <a href="../Qrcode/qrcodegenerated.php">Qr Code </a>
+                <a href="../Qrcode/index.php">Qr Code Generated </a>
                 <a href="viewstudent.php">View All Student</a>
                 <a href="../logout.php">logout</a>
               </div>
@@ -145,7 +145,6 @@ echo"<table class='table table-hover custab'>
 <th>Phone no.</th>
 <th>Joining Date</th>
 <th>Username</th>
-<th>Password</th>
 <th>Image</th>
 
 
@@ -166,7 +165,6 @@ echo"<table class='table table-hover custab'>
         <td>".$row["t_phone"]."</td>
         <td>".$row["t_jdate"]."</td>
         <td>".$row["t_username"]."</td>
-        <td>".$row["t_password"]."</td>
         <td><img src='../images/".$row['t_image']."'height = '100px' width = '100px'></td>
         </tr></tbody>";
 

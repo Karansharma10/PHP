@@ -76,7 +76,7 @@ session_start();
         <div class="row">
           <div class="col-lg-12 nav">
             <div class="dropdown">
-              <button onclick="myFunction()" class="dropbtn">Menu</button>
+              <button onclick="myFunction()" class="dropbtn">☰</button>
               <div id="myDropdown" class="dropdown-content">
                 <a href="profilepagestudent.php">Profile</a>
                 <a href="qrcodepagestudent.php">Qr Code Scann</a>

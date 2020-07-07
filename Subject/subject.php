@@ -72,7 +72,7 @@ if ($conn->query($sql) === TRUE) {
     <div class="row">
       <div class="col-lg-12 logg">
         <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Menu</button>
+  <button onclick="myFunction()" class="dropbtn">☰</button>
   <div id="myDropdown" class="dropdown-content">
   <!-- <div id="myDropdown" class="dropdown-content"> -->
   <a href="../Student/viewallstudents.php">View Student</a>
@@ -91,7 +91,7 @@ if ($conn->query($sql) === TRUE) {
       <div class="col-lg-12">
         <h1 class="wer">SCHOOL</h1>
       </div>
-      <form method="post">
+      <form method="post" name="myform" onsubmit="return validateform()">
       <div class="col-lg-12">
         <div class="login-wrap">
   <div class="login-html">
@@ -171,6 +171,21 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+<script>  
+function validateform(){  
+var subjectname=document.myform.subjectname.value;  
+var subjectcode=document.myform.subjectcode.value;  
+  
+if (subjectname==null || subjectname==""){  
+  alert("subjectname can't be blank");  
+  return false;  
+}else if(subjectcode==null || subjectcode==""){  
+  alert("subjectcode can't be blank");  
+  return false;
+}  
+}
+</script>  
 
 
 
